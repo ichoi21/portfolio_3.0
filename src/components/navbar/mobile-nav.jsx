@@ -41,7 +41,7 @@ const mobileNav = (props) => (
         <li className="flex-center">
           <Link
             activeClass="active-link"
-            to="about"
+            to="skills"
             spy={true}
             smooth={true}
             offset={-70}

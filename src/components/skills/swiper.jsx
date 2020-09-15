@@ -3,52 +3,77 @@ import Swiper from "react-id-swiper";
 // SCSS
 import "swiper/css/swiper.css";
 // Components
-import PartnerBox from "./partnerBox";
+import SkillsBox from "./skillsBox";
 // Assets
-import Partner01 from "../../assets/partners/partner01.svg";
-import Partner02 from "../../assets/partners/partner02.svg";
-import Partner03 from "../../assets/partners/partner03.svg";
-import Partner04 from "../../assets/partners/partner04.svg";
-import Partner05 from "../../assets/partners/partner05.svg";
-import Partner06 from "../../assets/partners/partner06.svg";
+import Skill01 from "../../assets/skills/partner01.svg";
+import Skill02 from "../../assets/skills/partner02.svg";
+import Skill03 from "../../assets/skills/partner03.svg";
+import Skill04 from "../../assets/skills/partner04.svg";
+import Skill05 from "../../assets/skills/partner05.svg";
+import Skill06 from "../../assets/skills/partner06.svg";
+import Skill07 from "../../assets/skills/partner07.svg";
+import Skill08 from "../../assets/skills/partner08.svg";
+import Skill09 from "../../assets/skills/partner09.svg";
+import Skill10 from "../../assets/skills/partner10.svg";
+import Skill11 from "../../assets/skills/partner11.svg";
 
 class MutipleSlidesPerView extends React.Component {
   state = {
-    partners: [
+    skills: [
       {
-        preview: Partner01,
+        preview: Skill01,
         id: "1",
       },
       {
-        preview: Partner02,
+        preview: Skill02,
         id: "2",
       },
       {
-        preview: Partner03,
+        preview: Skill03,
         id: "3",
       },
       {
-        preview: Partner04,
+        preview: Skill04,
         id: "4",
       },
       {
-        preview: Partner05,
+        preview: Skill05,
         id: "5",
       },
       {
-        preview: Partner06,
+        preview: Skill06,
         id: "6",
+      },
+      {
+        preview: Skill07,
+        id: "7",
+      },
+      {
+        preview: Skill08,
+        id: "8",
+      },
+      {
+        preview: Skill09,
+        id: "9",
+      },
+      {
+        preview: Skill10,
+        id: "10",
+      },
+      {
+        preview: Skill11,
+        id: "11",
       },
     ],
   };
 
   render() {
-    let partnersRender = null;
+    let skillsRender = null;
 
-    if (this.state.partners) {
-      partnersRender = this.state.partners.map((partner) => (
-        <div key={partner.id}>
-          <PartnerBox partner={partner.preview} />
+    if (this.state.skills) {
+      skillsRender = this.state.skills.map((skill) => (
+        <div key={skill.id}>
+          <SkillsBox skill={skill.preview} />
         </div>
       ));
     }
@@ -81,7 +106,7 @@ class MutipleSlidesPerView extends React.Component {
         },
       },
     };
-    return <Swiper {...params}>{partnersRender}</Swiper>;
+    return <Swiper {...params}>{skillsRender}</Swiper>;
   }
 }
 export default MutipleSlidesPerView;

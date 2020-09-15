@@ -5,7 +5,6 @@ import Title from "../ui-components/title/title";
 import logo_il from "../img/logo_li.png";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
-import { Button } from "react-scroll";
 
 const Contact = () => {
   return (
@@ -32,7 +31,7 @@ const Contact = () => {
               </Col>
               <Col xs={12} lg={1} className="contactS">
                 <a className="" href="https://www.illiest.com" target="blank">
-                  <img src={logo_il} />
+                  <img src={logo_il} alt="illiest" />
                 </a>
               </Col>
               <Col xs={12} lg={1} className="contactS">

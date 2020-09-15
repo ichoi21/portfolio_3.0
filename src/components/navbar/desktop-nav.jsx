@@ -11,7 +11,7 @@ const desktopNav = (props) => (
     <div className="wrapper flex-s-between">
       <div>
         <Link to="hero" spy={true} smooth={true} offset={0} duration={500}>
-          <img src={LogoImg} className="logos" alt="logo" className="pointer" />
+          <img src={LogoImg} alt="logo" className="pointer" />
         </Link>
       </div>
       <div className="mobile__menu" onClick={props.mobileMenuOpen}>
@@ -34,7 +34,7 @@ const desktopNav = (props) => (
           <li>
             <Link
               activeClass="active-link"
-              to="about"
+              to="skills"
               spy={true}
               smooth={true}
               offset={-70}
