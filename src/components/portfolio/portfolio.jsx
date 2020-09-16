@@ -27,55 +27,120 @@ class Portfolio extends React.Component {
         {
           id: "1",
           preview: Ass1,
-          title: "G-books React Search",
+          title: (
+            <a
+              target="blank"
+              rel="noopener noreferrer"
+              href="https://ic-gbooks.herokuapp.com/"
+            >
+              G-books React Search
+            </a>
+          ),
           tag: "assignments",
         },
         {
           id: "2",
           preview: Proj3,
-          title: "SMVCKLVB",
+          title: (
+            <a
+              target="blank"
+              rel="noopener noreferrer"
+              href="https://ic-smacklab.herokuapp.com"
+            >
+              SMVCKLVB
+            </a>
+          ),
           tag: "projects",
         },
         {
           id: "3",
           preview: Ass3,
-          title: "Rand. User Directory",
+          title: (
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://ichoi21.github.io/HWK16/"
+            >
+              Rand. User Directory
+            </a>
+          ),
           tag: "assignments",
         },
         {
           id: "4",
           preview: Site1,
-          title: "illiest",
+          title: (
+            <a
+              target="blank"
+              rel="noopener noreferrer"
+              href="https://www.illiest.com"
+            >
+              illiest
+            </a>
+          ),
           tag: "web",
         },
         {
           id: "5",
           preview: Ass4,
-          title: "Weather Dashboard App",
+          title: (
+            <a
+              target="blank"
+              rel="noopener noreferrer"
+              href="https://ichoi21.github.io/HWK06/"
+            >
+              Weather Dashboard App
+            </a>
+          ),
           tag: "assignments",
         },
         {
           id: "6",
           preview: Proj1,
-          title: "CSS (Coffee Shop Search)",
+          title: (
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://ichoi21.github.io/CSSearch/home.html"
+            >
+              CSS (Coffee Shop Search)
+            </a>
+          ),
           tag: "projects",
         },
         {
           id: "7",
           preview: Proj2,
-          title: "Shoequelize",
+          title: (
+            <a
+              href="https://ic-shoequelize.herokuapp.com/"
+              target="blank"
+              rel="noopener noreferrer"
+              s
+            >
+              Shoequelize
+            </a>
+          ),
           tag: "projects",
         },
         {
           id: "8",
           preview: Ass2,
-          title: "Day Planner",
+          title: (
+            <a target="blank" href="https://ichoi21.github.io/HWK05/">
+              Day Planner
+            </a>
+          ),
           tag: "assignments",
         },
         {
           id: "9",
           preview: Site2,
-          title: "Cal Pacific Systems",
+          title: (
+            <a href="https://www.calpacificsystems.com" target="blank">
+              Cal Pacific Systems
+            </a>
+          ),
           tag: "web",
         },
       ],
@@ -157,9 +222,9 @@ class Portfolio extends React.Component {
       500: 1,
     };
     // PORTFOLIO FILTER DROPDOWN MENY RENDER
-    let filterDroppDown = null;
+    let filterDD = null;
     if (this.state.filterMenuActive) {
-      filterDroppDown = (
+      filterDD = (
         <div className="portSort-menu shadow">
           <p
             className="font12"
@@ -229,16 +294,12 @@ class Portfolio extends React.Component {
               </div>
             </Col>
             <Col xs={12} sm={12} md={4} lg={3}>
-              <div
-                className="portSort"
-                onMouseEnter={() => this.filterMenuHover(true)}
-                onMouseLeave={() => this.filterMenuHover(false)}
-              >
+              <div className="portSort" s>
                 <p className="font12 lowercase">
                   sort by {this.state.pickedFilterDropdown}
                 </p>
                 <img src={Arrow} alt="arrow" />
-                {filterDroppDown}
+                {filterDD}
               </div>
             </Col>
           </Row>

@@ -4,7 +4,6 @@ import DesktopNav from "./components/navbar/desktop-nav";
 import MobileNav from "./components/navbar/mobile-nav";
 import Hero from "./components/hero/hero";
 import About from "./components/about/about";
-import Blog from "./components/blog/blog";
 import Skills from "./components/skills/skills";
 import Portfolio from "./components/portfolio/portfolio";
 import Contact from "./components/contact/contact";
@@ -70,7 +69,6 @@ class App extends React.Component {
         <Skills /> {/*  Skills */}
         <Portfolio /> {/* Showcase */}
         <Contact /> {/* Connect */}
-        {/* <Blog /> */}
         <Footer />
       </div>
     );
