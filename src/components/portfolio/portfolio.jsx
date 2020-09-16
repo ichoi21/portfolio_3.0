@@ -5,12 +5,15 @@ import Masonry from "react-masonry-css";
 import "./portfolio.scss";
 //Assets
 import Arrow from "../../assets/portfolio/arrow.svg";
-import Preview1 from "../../assets/portfolio/project01/preview.png";
-import Preview2 from "../../assets/portfolio/project02/preview.png";
-import Preview3 from "../../assets/portfolio/project03/preview.png";
-import Preview4 from "../../assets/portfolio/project04/preview.png";
-import Preview5 from "../../assets/portfolio/project05/preview.png";
-import Preview6 from "../../assets/portfolio/project06/preview.png";
+import Ass1 from "../../assets/portfolio/ass01.png";
+import Ass2 from "../../assets/portfolio/ass02.png";
+import Ass3 from "../../assets/portfolio/ass03.png";
+import Ass4 from "../../assets/portfolio/ass04.png";
+import Proj1 from "../../assets/portfolio/p1.png";
+import Proj2 from "../../assets/portfolio/p2.png";
+import Proj3 from "../../assets/portfolio/p3.png";
+import Site1 from "../../assets/portfolio/s1.png";
+import Site2 from "../../assets/portfolio/s2.png";
 
 import Title from "../ui-components/title/title";
 import ProjectBox from "../ui-components/projectBox/projectBox";
@@ -23,46 +26,64 @@ class Portfolio extends React.Component {
       projects: [
         {
           id: "1",
-          preview: Preview1,
-          title: "Lamp",
-          tag: "branding",
+          preview: Ass1,
+          title: "G-books React Search",
+          tag: "assignments",
         },
         {
           id: "2",
-          preview: Preview2,
-          title: "Smartwatch",
-          tag: "web",
+          preview: Proj3,
+          title: "SMVCKLVB",
+          tag: "projects",
         },
         {
           id: "3",
-          preview: Preview3,
-          title: "Speakerphone",
-          tag: "illustrations",
+          preview: Ass3,
+          title: "Rand. User Directory",
+          tag: "assignments",
         },
         {
           id: "4",
-          preview: Preview4,
-          title: "Sneakers",
+          preview: Site1,
+          title: "illiest",
           tag: "web",
         },
         {
           id: "5",
-          preview: Preview5,
-          title: "Label",
-          tag: "illustrations",
+          preview: Ass4,
+          title: "Weather Dashboard App",
+          tag: "assignments",
         },
         {
           id: "6",
-          preview: Preview6,
-          title: "lemons",
-          tag: "branding",
+          preview: Proj1,
+          title: "CSS (Coffee Shop Search)",
+          tag: "projects",
+        },
+        {
+          id: "7",
+          preview: Proj2,
+          title: "Shoequelize",
+          tag: "projects",
+        },
+        {
+          id: "8",
+          preview: Ass2,
+          title: "Day Planner",
+          tag: "assignments",
+        },
+        {
+          id: "9",
+          preview: Site2,
+          title: "Cal Pacific Systems",
+          tag: "web",
         },
       ],
       // PORTFOLIO GALLERY WILL LOAD THIS AFTER FUNCTION "filterGallery" FINISH FILTERING
       filterResult: null,
       pickedFilter: "all",
       filterMenuActive: false,
-      pickedFilterDropdown: "NEWEST",
+      pickedFilterDropdown: "newest",
     };
   }
 
@@ -85,7 +106,7 @@ class Portfolio extends React.Component {
     this.setState({
       filterResult: result,
       pickedFilter: target,
-      pickedFilterDropdown: "NEWEST",
+      pickedFilterDropdown: "newest",
     });
   };
 
@@ -105,9 +126,9 @@ class Portfolio extends React.Component {
     let projectsArr = [...this.state.filterResult];
     let result;
 
-    if (filter === "NEWEST") {
+    if (filter === "newest") {
       result = projectsArr.sort((a, b) => (a.id > b.id ? 1 : -1));
-    } else if (filter === "OLDEST") {
+    } else if (filter === "oldest") {
       result = projectsArr.sort((a, b) => (a.id > b.id ? 1 : -1)).reverse();
     }
 
@@ -139,16 +160,16 @@ class Portfolio extends React.Component {
     let filterDroppDown = null;
     if (this.state.filterMenuActive) {
       filterDroppDown = (
-        <div className="portfolio__filter-menu shadow">
+        <div className="portSort-menu shadow">
           <p
             className="font12"
-            onClick={() => this.filterDropDownHandler("NEWEST")}
+            onClick={() => this.filterDropDownHandler("newest")}
           >
             newest
           </p>
           <p
             className="font12"
-            onClick={() => this.filterDropDownHandler("OLDEST")}
+            onClick={() => this.filterDropDownHandler("oldest")}
           >
             oldest
           </p>
@@ -162,12 +183,12 @@ class Portfolio extends React.Component {
           <Title title="showcase." />
           <Row>
             <Col xs={12} sm={12} md={8} lg={9}>
-              <div className="portfolio__nav">
+              <div className="portNav">
                 <ul>
                   <li
                     className={
                       this.state.pickedFilter === "all"
-                        ? "portfolio__nav-active font12"
+                        ? "portNav-active font12"
                         : "font12"
                     }
                     onClick={() => this.filterGallery("all")}
@@ -176,28 +197,28 @@ class Portfolio extends React.Component {
                   </li>
                   <li
                     className={
-                      this.state.pickedFilter === "branding"
-                        ? "portfolio__nav-active font12"
+                      this.state.pickedFilter === "assignments"
+                        ? "portNav-active font12"
                         : "font12"
                     }
-                    onClick={() => this.filterGallery("branding")}
+                    onClick={() => this.filterGallery("assignments")}
                   >
                     assignments
                   </li>
                   <li
                     className={
-                      this.state.pickedFilter === "illustrations"
-                        ? "portfolio__nav-active font12"
+                      this.state.pickedFilter === "projects"
+                        ? "portNav-active font12"
                         : "font12"
                     }
-                    onClick={() => this.filterGallery("illustrations")}
+                    onClick={() => this.filterGallery("projects")}
                   >
                     projects
                   </li>
                   <li
                     className={
                       this.state.pickedFilter === "web"
-                        ? "portfolio__nav-active font12"
+                        ? "portNav-active font12"
                         : "font12"
                     }
                     onClick={() => this.filterGallery("web")}
@@ -209,7 +230,7 @@ class Portfolio extends React.Component {
             </Col>
             <Col xs={12} sm={12} md={4} lg={3}>
               <div
-                className="portfolio__filter"
+                className="portSort"
                 onMouseEnter={() => this.filterMenuHover(true)}
                 onMouseLeave={() => this.filterMenuHover(false)}
               >
@@ -224,7 +245,7 @@ class Portfolio extends React.Component {
           <Masonry
             breakpointCols={portfolioBreakpoints}
             className="my-masonry-grid"
-            columnClassName="mint__gallery"
+            columnClassName="gallery"
           >
             {projectsRender}
           </Masonry>

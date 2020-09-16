@@ -1,9 +1,9 @@
-@import '../../style/App.scss';
+@import "../../style/App.scss";
 
 #portfolio {
   padding: 20px 0 40px 0;
 
-  .portfolio__nav {
+  .portNav {
     ul {
       display: flex;
       li {
@@ -16,11 +16,11 @@
         background-color: $main-color;
       }
     }
-    .portfolio__nav-active {
+    .portNav-active {
       background-color: $main-color;
     }
   }
-  .portfolio__filter {
+  .portSort {
     display: flex;
     justify-content: flex-end;
     cursor: pointer;
@@ -35,7 +35,7 @@
       padding-right: 10px;
     }
 
-    .portfolio__filter-menu {
+    .portSort-menu {
       background-color: $light-color;
       position: absolute;
       top: 40px;
@@ -64,42 +64,41 @@
   margin-left: -30px; /* gutter size offset */
   width: auto;
 }
-.mint__gallery {
+.gallery {
   padding-left: 30px; /* gutter size */
   background-clip: padding-box;
 }
- 
+
 /* Style your items */
-.mint__gallery > div { /* change div to reference your elements you put in <Masonry> */
+.gallery > div {
+  /* change div to reference your elements you put in <Masonry> */
   margin-bottom: 30px;
 }
 
 @media screen and (max-width: 767px) {
   #portfolio {
-    .portfolio__nav {
+    .portNav {
       ul {
         justify-content: center;
       }
     }
-    .portfolio__filter {
+    .portSort {
       justify-content: center;
       max-width: 200px;
       margin: 30px auto;
       float: none;
-
     }
   }
 }
 
 @media screen and (max-width: 400px) {
   #portfolio {
-    .portfolio__nav {
+    .portNav {
       ul {
         li {
           padding: 5px 5px;
           margin-right: 5px;
         }
-
       }
     }
   }

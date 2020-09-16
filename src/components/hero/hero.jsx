@@ -2,7 +2,7 @@ import React from "react";
 import { Row, Col } from "react-flexbox-grid";
 // SCSS
 import "./hero.scss";
-import HeroImage from "../img/iC_Avatar.png";
+import HeroImage from "../../assets/hero/iC_Avatar.png";
 import Button from "../ui-components/button/button";
 
 const hero = () => (
