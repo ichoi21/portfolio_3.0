@@ -12,9 +12,8 @@ All skills acquired from this Berkeley Boot Camp Program will be displayed along
 
 ## Narrative on steps taken.
 
-- create backend for future builds.
 - used [npx create-react-app client] to use react for front end development.
-- convert Portfolio 2.0 context to React
+- ~~convert Portfolio 2.0 context to React~~ redid portfolio in new design with react.
 
 ## Libraries + References
 
@@ -23,8 +22,8 @@ All skills acquired from this Berkeley Boot Camp Program will be displayed along
 
 - [HTML/CSS](https://w3schools.com)
 - [React](https://reactjs.org)
-- [MaterializeCSS](https://materializecss.com/)
-- [Material icons](https://material.io/)
+- [Material UI](https://material-ui.com/)
+- [Graphberry](https://grpahberry.com/)
 - [Google Fonts](https://fonts.google.com/)
 - [Font Awesome](https://fontawesome.com/start)
 - [jQuery](https://code.jquery.com/)
@@ -36,7 +35,7 @@ All skills acquired from this Berkeley Boot Camp Program will be displayed along
 
 - Widgets that would embed more APIs involvements (weather, tickers)
 - Further Optimization to reduce and simplify.
-- Backend is already set up
+- Create backend for future builds with APIs.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
